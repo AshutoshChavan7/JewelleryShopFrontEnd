@@ -17,8 +17,10 @@ const Login =()=>{
 const passlogin=()=>{
   ProductServices.loginUser(loginob)
   .then((result)=>
-   {
-      console.log(result.data);
+   {  
+       console.log( result.data.status ==500)
+      
+      console.log(result.data)
      // sessionStorage.setItem("user",JSON.stringify(result.data.user))
       sessionStorage.setItem("Role",JSON.stringify(result.data.athentication.role));
       sessionStorage.setItem("userId",JSON.stringify(result.data.id))
@@ -33,11 +35,16 @@ const passlogin=()=>{
       else if(Us.includes("Customer")){
         history.push("/home")
       }
+    
+        
        
       
 
       
-   }).catch(()=>{})
+   }).catch((err)=>{
+    alert("Incorrect email or pass. If you are new Customer please signup")
+   
+})
   
   
   }

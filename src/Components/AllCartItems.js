@@ -12,6 +12,8 @@ import { toast } from "react-toastify";
 
 const USER_API_BASE_URL = "http://localhost:7070/cart/";
 
+const Remove_Cart = "http://localhost:8080/medi/api/cart/remove/";
+const Remove_Cart_Items = "http://localhost:8080/medi/api/cart/remove";
 //===================================================================================
 
 
@@ -107,10 +109,10 @@ const AllCartItems = () => {
 //============================================================================================================
 const removeCartItem = (id) => {
   const token = sessionStorage.getItem("token");
-  let cid = sessionStorage.getItem("userID");
+  let cid = sessionStorage.getItem("userId");
  // let navigate = useNavigate;
   let productID = id;
-  let customerID = 3;
+  let customerID = cid;
 
   const userDto = {
     productId: productID,

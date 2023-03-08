@@ -6,6 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Gold from './Components/Gold';
 import GRing from './Components/Goldd/Rings';
+import GChain from './Components/Goldd/Chains';
+import GMangalsutra from './Components/Goldd/Mangalsutra';
+import GPendent from './Components/Goldd/Pendants';
 import AddProduct from './Components/AddProduct'
 import Manager from './Components/Manager'
 
@@ -15,12 +18,17 @@ import EmployeeDetails from './Components/Staff/EmployeeDetails'
 import EmployeeEdit from './Components/Staff/EmployeeEdit'
 import AddCartItems from './Components/AllCartItems'
 
-import logo3 from './Components/logo.jpg';
+import SignUp from'./Components/Signup'
+import LogOut from './Components/LogOut'
+
+import logo3 from './Components/new2.JPG';
 function App() {
   return (
     <div className="App">
-       <nav class="navbar navbar-expand-lg navbar-custom"  >
-  <a class="navbar-brand" href="#"><img src={logo3} height={50} width={100}></img>  </a>
+      <div className='mydiv'>
+       <nav class="navbar  navbar-expand-lg navbar-custom"  
+       >
+  <a class="navbar-brand" href="#"><img src={logo3} height={70} width={150}></img>  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -46,12 +54,11 @@ function App() {
 			  <span class="navbar-toggler-icon"></span>
 			</button>
 		</div>
-      
+    
     <div class="nav-item">
-      <a class="nav-link"  href="/Card"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-</svg>Card</a>
+      <a class="nav-link"  href="/Card"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>My Cart</a>
       </div>
 
       <div class="nav-item">
@@ -60,12 +67,30 @@ function App() {
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg>Login</a>
       </div>
+      <div class="nav-item">
+      <a class="nav-link"  href="/Signup"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>SignUp</a>
+
+
+      </div>  
+      <div class="nav-item">
+      <a class="nav-link"  href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>LogOut</a>
+      </div> 
+
      
-   
   </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light " >
-  <a class="navbar-brand" href="#">CATEGORIES</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light "
+ style={{
+  position: "relative"
+  // padding: "-2px"
+}} >
+  <a class="navbar-brand" href="/home">CATEGORIES</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -101,15 +126,22 @@ function App() {
       </ul>
       </div> 
 </nav>
-      
+</div>    
     <Router>
         <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/login" component={Login}></Route>
+       
         <Route path="/home" component={Home}></Route>
         <Route path="/addProduct" component={AddProduct}></Route>
+
         <Route path="/gold" component={Gold}></Route>
         <Route path="/1/1" component={GRing}></Route>
+        <Route path="/1/2" component={GChain}></Route>
+        <Route path="/1/3" component={GMangalsutra}></Route>
+        <Route path="/1/4" component={GPendent}></Route>
+        <Route path="/login" component={Login}></Route>
+        <Route path="/signup" component={SignUp}></Route>
+        <Route path="/logout" component={LogOut}></Route>
 
         <Route path="/manager" component={Manager}></Route>
 

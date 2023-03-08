@@ -98,11 +98,11 @@ const AddProduct =()=>{
    
   <option value="1">Ring</option>
   <option value="2">Chain</option>
-  <option value="3">Manalsutra</option>
+  <option value="3">Mangalsutra</option>
   <option value="4">Pendant</option>
   <option value="5">Bangles</option>
-  <option value="6">Braclet</option>
-  <option value="7">Neacklace</option>
+  <option value="6">Bracelet</option>
+  <option value="7">Necklace</option>
   <option value="8">Other</option>
     </select>
   </div>
