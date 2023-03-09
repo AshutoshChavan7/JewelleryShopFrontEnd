@@ -4,7 +4,7 @@ class ProductService{
     constructor(){
         this.baseUrl="http://localhost:7070/";
    }
-    getProducts(){
+    getProductss(){
         return axios.get(this.baseUrl+"products");
     }
     getProducts(cid,csid){
@@ -12,6 +12,10 @@ class ProductService{
     }
     addProduct(prod){
         return axios.post(this.baseUrl+"products",prod)
+    }
+
+    getProduct(mid){
+        return axios.get(this.baseUrl+"manager/allproducts/"+mid)
     }
 
     changeProfile = (body, userId) => {

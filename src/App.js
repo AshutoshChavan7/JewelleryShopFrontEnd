@@ -9,6 +9,7 @@ import GRing from './Components/Goldd/Rings';
 import GChain from './Components/Goldd/Chains';
 import GMangalsutra from './Components/Goldd/Mangalsutra';
 import GPendent from './Components/Goldd/Pendants';
+import GBangles from  './Components/Goldd/Bangles';
 import AddProduct from './Components/AddProduct'
 import Manager from './Components/Manager'
 
@@ -139,6 +140,7 @@ function App() {
         <Route path="/1/2" component={GChain}></Route>
         <Route path="/1/3" component={GMangalsutra}></Route>
         <Route path="/1/4" component={GPendent}></Route>
+        <Route path="/1/5" component={GBangles}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/signup" component={SignUp}></Route>
         <Route path="/logout" component={LogOut}></Route>
