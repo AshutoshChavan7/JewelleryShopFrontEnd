@@ -29,7 +29,7 @@ const Gold =()=>{
        let history=useHistory();
 
        useEffect( ()=> {
-        ProductServices.getProducts(1,6).
+        ProductServices.getProducts(3,6).
         then((response)=>{
             console.log("in useeffect of prodlist");
             console.log(response.data);
@@ -105,7 +105,7 @@ const Gold =()=>{
               <img src={`data:image/jpeg;base64,${prod.image}`}style={ {width:"80%", height:"70%"}}/>
               <CardText className="body">{prod.productname} </CardText>
               <CardText className="body">Weight:{prod.weight}gms</CardText>
-              <CardText className="body">₹ {prod.price}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <CardText className="body"><b>₹ {prod.price}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{(sessionStorage.getItem("token") && sessionStorage.getItem("userRole").includes("ADMIN")) 
              ?
              <></>
@@ -183,10 +183,3 @@ const Gold =()=>{
                 </div>
             </div>
         </div> */}
-
-
-
-
-
-
-

@@ -24,24 +24,16 @@ const passlogin=()=>{
      // sessionStorage.setItem("user",JSON.stringify(result.data.user))
       sessionStorage.setItem("Role",JSON.stringify(result.data.athentication.role));
       sessionStorage.setItem("userId",JSON.stringify(result.data.id))
-  
       console.log(sessionStorage.getItem("Role"))
       console.log(sessionStorage.getItem("userId"))
       let Us=sessionStorage.getItem("Role");
      // let Ur=JSON.stringify(result.data.)
       if(Us.includes("Manager")){
-        sessionStorage.setItem("Name",JSON.stringify(result.data.managerName))
         history.push("/manager")
       }
 
       else if(Us.includes("Customer")){
-        sessionStorage.setItem("Name",JSON.stringify(result.data.customerName))
         history.push("/home")
-      }
-
-      else {
-        sessionStorage.setItem("Name",JSON.stringify(result.data.staffName))
-       history.push("/addProduct")
       }
     
         

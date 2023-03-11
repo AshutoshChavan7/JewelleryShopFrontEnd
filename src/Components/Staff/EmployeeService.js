@@ -17,7 +17,7 @@ class EmployeeService{
 
     }
     updateemeployee(emp){
-        return axios.put(this.baseUrl+"staff/update/"+emp.empid,emp)
+        return axios.put(this.baseUrl+"staff/update",emp)
     }
 
 }

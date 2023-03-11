@@ -8,7 +8,8 @@ const Home=()=>{
 
     return(
       <div>
-       <img src={logo1} width="100%" height="500"></img>
+       <a href="/1/3"> <img src={logo1} width="100%" height="500"></img></a>
+
       
       <div>
         

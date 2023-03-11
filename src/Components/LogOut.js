@@ -7,6 +7,7 @@ const LogOut =()=>{
    
     sessionStorage.removeItem('Role');
     sessionStorage.removeItem('userId');
+    sessionStorage.removeItem("Name");
     history.push("/home");
 
     return(

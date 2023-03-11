@@ -29,7 +29,7 @@ const Gold =()=>{
        let history=useHistory();
 
        useEffect( ()=> {
-        ProductServices.getProducts(1,6).
+        ProductServices.getProducts(2,6).
         then((response)=>{
             console.log("in useeffect of prodlist");
             console.log(response.data);

@@ -10,6 +10,29 @@ import GChain from './Components/Goldd/Chains';
 import GMangalsutra from './Components/Goldd/Mangalsutra';
 import GPendent from './Components/Goldd/Pendants';
 import GBangles from  './Components/Goldd/Bangles';
+import GBracelet from './Components/Goldd/Bracelet';
+import GNecklace from './Components/Goldd/Necklace';
+
+import Silver from './Components/Silver';
+import SRing from './Components/Silverr/Rings';
+import SChain from './Components/Silverr/Chains';
+import SMangalsutra from './Components/Silverr/Mangalsutra';
+import SPendent from './Components/Silverr/Pendants';
+//import SBangles from  './Components/Silverr/Bangles';
+import SBracelet from './Components/Silverr/Bracelet';
+import SNecklace from './Components/Silverr/Necklace';
+
+import Goldd from './Components/Goldd';
+import PRing from './Components/Platinum/Rings';
+import PChain from './Components/Platinum/Chains';
+import PMangalsutra from './Components/Platinum/Mangalsutra';
+import PPendent from './Components/Platinum/Pendants';
+import PBangles from  './Components/Platinum/Bangles';
+import PBracelet from  './Components/Platinum/Bracelet';
+import PNecklace from   './Components/Platinum/Necklace';
+
+
+
 import AddProduct from './Components/AddProduct'
 import Manager from './Components/Manager'
 
@@ -23,6 +46,10 @@ import SignUp from'./Components/Signup'
 import LogOut from './Components/LogOut'
 
 import logo3 from './Components/new2.JPG';
+import PlaceOrders from './Components/Order';
+
+
+let profile = sessionStorage.getItem("Name");
 function App() {
   return (
     <div className="App">
@@ -38,9 +65,9 @@ function App() {
       <li class="nav-item active">
         <a class="nav-link" href="/Home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      {/* <li class="nav-item active">
         <a class="nav-link" href="/AddProduct">AddProduct <span class="sr-only">(current)</span></a>
-      </li>
+      </li> */}
       <li class="nav-item">
         <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone" viewBox="0 0 16 16">
   <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199V2.5zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0zm-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065zm-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z"/>
@@ -55,20 +82,25 @@ function App() {
 			  <span class="navbar-toggler-icon"></span>
 			</button>
 		</div>
+     
+   
     
     <div class="nav-item">
+    <div className='a1'> aaaaaaa </div>
       <a class="nav-link"  href="/Card"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg>My Cart</a>
       </div>
 
       <div class="nav-item">
+        <div className='a1'> aaaaaaa </div>
       <a class="nav-link"  href="/Login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg>Login</a>
       </div>
       <div class="nav-item">
+      <div className='a1'> aaaaaaa </div>
       <a class="nav-link"  href="/Signup"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -77,6 +109,7 @@ function App() {
 
       </div>  
       <div class="nav-item">
+     <b> Welcome {profile}</b>
       <a class="nav-link"  href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -101,13 +134,13 @@ function App() {
         <a class="nav-link" href="/gold">GOLD <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">SILVER</a>
+        <a class="nav-link" href="/silver">SILVER</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">DIAMOND</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">PLATINUM</a>
+        <a class="nav-link" href="/goldd">PLATINUM</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">BULLION</a>
@@ -134,13 +167,38 @@ function App() {
        
         <Route path="/home" component={Home}></Route>
         <Route path="/addProduct" component={AddProduct}></Route>
+        <Route path="/addProduct" component={AddProduct}></Route>
 
         <Route path="/gold" component={Gold}></Route>
+        
         <Route path="/1/1" component={GRing}></Route>
         <Route path="/1/2" component={GChain}></Route>
         <Route path="/1/3" component={GMangalsutra}></Route>
         <Route path="/1/4" component={GPendent}></Route>
         <Route path="/1/5" component={GBangles}></Route>
+        <Route path="/1/6" component={GBracelet}></Route>
+        <Route path="/1/7" component={GNecklace}></Route>
+
+        <Route path="/silver" component={Silver}></Route>
+
+        <Route path="/2/1" component={SRing}></Route>
+        <Route path="/2/2" component={SChain}></Route>
+        <Route path="/2/3" component={SMangalsutra}></Route>
+        <Route path="/2/4" component={SPendent}></Route>
+        {/* <Route path="/2/5" component={SBangles}></Route> */}
+        <Route path="/2/6" component={SBracelet}></Route>
+        <Route path="/2/7" component={SNecklace}></Route>
+
+        <Route path="/goldd" component={Goldd}></Route>
+        <Route path="/3/1" component={PRing}></Route>
+        <Route path="/3/2" component={PChain}></Route>
+        <Route path="/3/3" component={PMangalsutra}></Route>
+        <Route path="/3/4" component={PPendent}></Route>
+        <Route path="/3/5" component={PBangles}></Route>
+        <Route path="/3/6" component={PBracelet}></Route>
+        <Route path="/3/7" component={PNecklace}></Route>
+
+
         <Route path="/login" component={Login}></Route>
         <Route path="/signup" component={SignUp}></Route>
         <Route path="/logout" component={LogOut}></Route>
@@ -153,6 +211,7 @@ function App() {
         <Route path="/view/:empid" component={EmployeeDetails}></Route> 
 
         <Route path="/card" component={AddCartItems}></Route>
+        <Route path="/order" component={PlaceOrders}></Route>
        
 
         </Switch>

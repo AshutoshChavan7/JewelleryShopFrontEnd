@@ -267,7 +267,7 @@ const getCartItems = () => {
         </Container>
       </div>
       <div>
-        <a href="/Address" >
+        <a href="/order" >
           <Button color="success">Check Out</Button>
         </a>{" "}
         <Button color="primary" onClick={emptyCart}>

@@ -5,17 +5,17 @@ import axios, { Axios } from 'axios';
 
 const USER_API_BASE_URL = "http://localhost:7070";
 const Signup =()=>{
-    let [cust,setcust]=useState({customerName:"",email:"",password:"",contactNo:"",city:"",state:"",zip:"" });
+    let [cust,setcust]=useState({customerName:"",email:"",password:"",cotactNo:"",city:"",state:"",zip:"" });
     let history=useHistory();
     const handleChange=(event)=>{
         const {name,value}=event.target;
         setcust({...cust,[name]:value});
     }
     const addData=()=>{
-        axios.post(USER_API_BASE_URL,cust)
+        axios.post(USER_API_BASE_URL+"/customer/add",cust)
         .then((result)=>{
             console.log(result.data);
-            history.push("/list");
+            history.push("/home");
         })
         .catch(()=>{})
     }
@@ -45,9 +45,9 @@ const Signup =()=>{
      placeholder="Enter password"/>
   </div>
   <div className="form-group">
-    <label htmlFor="contactNo">Contact No </label>
-    <input type="text" className="form-control" name="contactNo" id="contactNo"
-     value={cust.contactNo}
+    <label htmlFor="cotactNo">Contact No </label>
+    <input type="text" className="form-control" name="cotactNo" id="cotactNo"
+     value={cust.cotactNo}
      onChange={handleChange}
      placeholder="Enter Contact No"/>
   </div>
